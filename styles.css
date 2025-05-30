@@ -23,25 +23,37 @@ body {
 .introduction {
   display: flex;
   align-items: center;
-  /* margin: 3rem 5rem; */
   justify-content: center;
+  gap: 2rem;
+  background-color: #629af3;
 }
 
 .about {
-  border: 1px black solid;
+  border-radius: 10px;
   padding: 4rem;
+  background-color: white;
 }
 
 .contacts {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #7362f3;
+  gap: 2rem;
+}
+
+.contact {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .works {
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(2, 1fr) / repeat(3, 15rem);
   gap: 1rem;
+  justify-items: center;
+  justify-content: center;
 }
 
 .works div {
