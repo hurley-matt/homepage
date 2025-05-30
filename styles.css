@@ -20,18 +20,28 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+img {
+  border-radius: 10px;
+}
+
 .introduction {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   background-color: #629af3;
+  padding: 3rem 0;
+}
+
+.introduction > img {
+  border: 5px #40649e solid;
 }
 
 .about {
   border-radius: 10px;
   padding: 4rem;
   background-color: white;
+  border: 5px #40649e solid;
 }
 
 .contacts {
@@ -40,23 +50,92 @@ body {
   justify-content: center;
   background-color: #7362f3;
   gap: 2rem;
+  padding: 2rem 0;
 }
 
 .contact {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
+  border: 5px #4b409e solid;
+}
+
+.contacts > img {
+  border: 5px #4b409e solid;
 }
 
 .works {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 15rem);
-  gap: 1rem;
+  gap: 3rem;
   justify-items: center;
   justify-content: center;
+  background-color: #f2f1e6;
+  padding: 6rem 0;
 }
 
 .works div {
-  border: 1px black solid;
+  border: 4px #112a46 solid;
   padding: 3rem 0;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.work-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f1e6;
+  padding-top: 3rem;
+}
+
+@media (width < 60em) {
+  :root {
+    font-size: 0.8rem;
+  }
+  .works {
+    grid-template: repeat(3, 1fr) / repeat(2, 15rem);
+  }
+  .introduction > img {
+    width: 300px;
+  }
+  .about {
+    padding: 1rem;
+  }
+  .contact {
+    padding: 1rem;
+  }
+  .contacts > img {
+    width: 300px;
+  }
+  .works {
+    padding: 2rem 0;
+  }
+}
+
+@media (width < 40em) {
+  :root {
+    font-size: 0.65rem;
+  }
+  .works {
+    grid-template: 1fr / 15rem;
+  }
+  .introduction {
+    flex-direction: column;
+  }
+  .contacts {
+    flex-direction: column;
+  }
+  .introduction > img {
+    width: 200px;
+  }
+  .contacts > img {
+    width: 300px;
+  }
+  .about {
+    padding: 1rem;
+  }
+  .contact {
+    padding: 1rem;
+  }
 }
